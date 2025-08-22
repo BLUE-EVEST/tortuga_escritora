@@ -1,7 +1,3 @@
-from re import A
-from turtle import pendown
-
-
 class Tortuga_Recorre:
     def __init__(self):
         self.a = 100
@@ -18,14 +14,21 @@ class Tortuga_Recorre:
                             {"letra":"J","Funcion":self.Letra_J},
                             {"letra":"K","Funcion":self.Letra_K},
                             {"letra":"L","Funcion":self.Letra_L},
+                            {"letra":"M","Funcion":self.Letra_M},
+                            {"letra":"N","Funcion":self.Letra_N},
+                            {"letra":"Ñ","Funcion":self.Letra_ANTIGRINGOS},
                             {"letra":"O","Funcion":self.Letra_O},
                             {"letra":"P","Funcion":self.Letra_P},
                             {"letra":"Q","Funcion":self.Letra_Q},
                             {"letra":"R","Funcion":self.Letra_R},
+                            {"letra":"S","Funcion":self.Letra_S},
                             {"letra":"T","Funcion":self.Letra_T},
                             {"letra":"U","Funcion":self.Letra_U},
                             {"letra":"V","Funcion":self.Letra_V},
-                            {"letra":"X","Funcion":self.Letra_X}] #{"letra":"","Funcion":self.Letra_}
+                            {"letra":"W","Funcion":self.Letra_W},
+                            {"letra":"X","Funcion":self.Letra_X},
+                            {"letra":"Y","Funcion":self.Letra_Y},
+                            {"letra":"Z","Funcion":self.Letra_Z}] #{"letra":"","Funcion":self.Letra_}
 
     def Letra_A(self):
         #Letra A
@@ -247,7 +250,48 @@ class Tortuga_Recorre:
         t.goto(0,0)
         t.pendown()          
         t.goto(0,self.b)
-      
+
+    def Letra_M(self):
+        #letra M
+        import turtle
+
+        t = turtle.Turtle()
+
+        t.speed(1)
+        t.goto(self.a/3,self.b)
+        t.goto(self.a/2,self.b/2)
+        t.goto(2*self.a/3,self.b)
+        t.goto(self.a,0)
+
+    def Letra_N(self):
+        #letra N
+        import turtle
+
+        t = turtle.Turtle()
+
+        t.speed(1)
+        t.goto(0,self.b)
+        t.goto(self.a,0)
+        t.goto(self.a,self.b)
+
+    def Letra_ANTIGRINGOS(self):
+        #letra Ñ
+        import turtle
+
+        t = turtle.Turtle()
+
+        t.speed(1)
+        t.goto(0*self.a,6*self.b/8)
+        t.goto(self.a,0)
+        t.goto(self.a,6*self.b/8)    
+        t.penup()
+        t.goto(self.a/8,13*self.b/16)
+        t.pendown()
+        t.left(90)
+        t.circle(-1.5*self.a/8,180)
+        t.circle(1.5*self.a/8,180)
+        print(t.position())
+
 
     def Letra_O(self):
         #Letra O
@@ -328,6 +372,29 @@ class Tortuga_Recorre:
         t.goto(self.a,0)
         # print(t.position())
 
+    def Letra_S(self):
+        #Letra S
+        import turtle
+        t = turtle.Turtle()
+        t.speed(1)
+
+        t.penup()
+        t.goto(self.a,3*self.b/4)
+        t.pendown()
+        #print(t.position())
+        t.left(90)
+        t.circle(50,250)
+        hora = t.position()
+        #print(t.position())
+        pocisiones_LIST = []
+        for posicion in hora:
+            pocisiones_LIST.append(posicion)
+        #print(pocisiones_LIST[0]) nunca mas hago la S XD
+        t.goto((self.a-pocisiones_LIST[0],self.b-pocisiones_LIST[1]))
+        #print(t.position())
+        t.circle(-50,250)
+        #print(t.position())
+
     def Letra_T(self):
         #Letra T
         import turtle
@@ -364,6 +431,20 @@ class Tortuga_Recorre:
         t.goto(self.a,self.b)
         #print(tortugui.position())
 
+    def Letra_W(self):
+        #Letra W
+        import turtle
+        t = turtle.Turtle()
+        t.speed(1)
+
+        t.penup()
+        t.goto(0,self.b)
+        t.pendown()
+        t.goto(self.a/3,0*self.b)
+        t.goto(self.a/2,self.b/2)
+        t.goto(2*self.a/3,0*self.b)
+        t.goto(self.a,self.b)
+
     def Letra_V(self):
         #Letra V
         import turtle
@@ -387,6 +468,34 @@ class Tortuga_Recorre:
         t.goto(0,self.b)
         t.pendown()
         t.goto(self.a,0)
+
+    def Letra_Y(self):
+        #Letra Y
+        import turtle
+        t = turtle.Turtle()
+        t.speed(1)
+
+        t.penup()
+        t.goto(0,self.b)
+        t.pendown()
+        t.goto(self.a/2,self.b/2)
+        t.goto(self.a,self.b)
+        t.goto(self.a/2,self.b/2)
+        t.goto(self.a/2,self.b*0)
+
+
+    def Letra_Z(self):
+        #Letra Z
+        import turtle
+        t = turtle.Turtle()
+        t.speed(1)
+
+        t.penup()
+        t.goto(0*self.a,self.b)
+        t.pendown()
+        t.goto(self.a,self.b)
+        t.goto(0*self.a,0*self.b)
+        t.goto(self.a,0*self.b)
             
 
 
